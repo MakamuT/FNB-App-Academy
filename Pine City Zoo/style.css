@@ -1,0 +1,67 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: o;
+}
+#header{
+    background-image: url("images/wood-bg.png");
+    background-repeat: repeat-x;
+    height: 80px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 500;
+}
+#header img{
+    display: block;
+    height: 70%;
+    margin: auto;
+    padding-top: 15px;
+}
+/*top tabs*/
+#tabs-top{
+    background-color: darkgreen;
+    height: 40px;
+    left: 0;
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    z-index: 500;
+}
+#tabs-top a{
+    color: #fffff0;
+    display: block;
+    float: left;
+    font-weight: 700;
+    height: 35px;
+    padding-top: 12px;
+    text-align: center;
+    text-decoration: none;
+    width: 33%;
+}
+/*main*/
+#main-home{
+    margin-top: 120px;
+}
+/*bottom tabs*/
+#tabs-bottom{
+    background-color: forestgreen;
+    bottom: 0;
+    height: 40px;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 500;
+}
+#tabs-bottom a{
+    color: #fffff0;
+    display: block;
+    float: left;
+    font-weight: 700;
+    height: 35px;
+    padding-top: 12px;
+    text-align: center;
+    text-decoration: none;
+    width: 50%;
+}
