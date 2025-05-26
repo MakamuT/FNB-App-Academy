@@ -65,3 +65,60 @@ body{
     text-decoration: none;
     width: 50%;
 }
+/*animals page*/
+#main{
+    background: url('images/map-blur.png');
+    background-repeat: repeat-y;
+    margin-top: 119px;
+}
+#content{
+    padding-bottom: 50px;
+    padding-top: 1px;
+}
+a.info-box{
+    background: rgba(255, 255, 255, 0.8);
+    display: block;
+    height: 90px;
+    margin: auto;
+    margin-top: 12px;
+    padding: 1px;
+    text-decoration: none;
+    width: 90%;
+}
+.info-box img{
+    float: left;
+    height: 70px;
+    margin: 10px;
+}
+.info-box h3{
+    color: #572800;
+    margin-bottom: 0;
+    padding: 0;
+    width: 90%;
+}
+.info-box p{
+    color: #131313;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+}
+.info-box img.right{
+    float: right;
+    height: 40px;
+    margin-top: 25px;
+}
+/*elephant page*/
+#info-box-full{
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+    margin: auto;
+    margin-top: 12px;
+    padding: 10px;
+    width: 90%;
+}
+#info-box-full img{
+    width: 100%;
+}
+#info-box-full h3{
+    text-align: center;
+}
