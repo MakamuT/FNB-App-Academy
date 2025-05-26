@@ -122,3 +122,47 @@ a.info-box{
 #info-box-full h3{
     text-align: center;
 }
+/*weather page*/
+img.info-box-weather-icon{
+    float: left;
+    height: 30px;
+    margin: 10px;
+    width: 30px !important;
+}
+h1.info-box-weather-icon{
+    font-size: 65px;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+}
+table{
+    width: 100%;
+}
+td{
+    border-top: 1px solid #131313;
+}
+/*feedback page*/
+input{
+    border: 1px solid #929292;
+    height: 25px;
+    margin: 12px 0;
+    width: 100%;
+}
+textarea{
+    border: 1px solid #929292;
+    height: 65px;
+    margin: 12px 0;
+    width: 100%;
+}
+.button{
+    background-color: forestgreen;
+    color: white;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 12px 0;
+    padding: 8px 0;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
