@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 id="heading1"></h1>
+        <p id="paragraph1"></p>
+        <p id="paragraph2"></p>
+
+
+        <script>
+            var text1;
+            var text2;
+            var text3;
+            var num1 = 10;
+            var num2 = 15;
+            text1 = "JavaScript Learning!";
+            text2 = "JavaScript is a very simple.";
+            text3 = "You can use it in many ways.";
+            
+            document.getElementById("heading1").innerHTML = (text1);
+            document.getElementById("paragraph1").innerHTML = (text2 + " " + text3);
+            document.getElementById("paragraph2").innerHTML = (num1 + "*" + num2 + " = " + (num1 * num2));
+        </script>
+    </body>
+</html>
