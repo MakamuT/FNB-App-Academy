@@ -4,10 +4,20 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1></h1>
-
+        <h1 id="heading" onclick="changeText()">JavaScript</h1>
+        <p id="addition"></p>
         <script>
-            
+            document.getElementById('addition').innerHTML = addNumbers(5, 10);
+            function changeText(){
+                if(document.getElementById('heading').innerHTML == "JavaScript"){
+                    document.getElementById('heading').innerHTML = "Is awesome";
+                } else {
+                    document.getElementById('heading').innerHTML = "JavaScript";
+                }
+            }
+            function addNumbers(num1, num2){
+                return num1 + num2;
+            }
         </script>
     </body>
 </html>
