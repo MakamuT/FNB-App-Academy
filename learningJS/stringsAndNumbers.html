@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <p id="outputText"></p>
+        <script>
+            var text1 = "ten";
+            var text2 = "3";
+            var num1 = stringToNumber(text1);
+            var num2 = stringToNumber(text2);
+
+            if(isNaN(num1)|| isNaN(num2)){
+                document.getElementById("outputText").innerHTML = "Please enter a vaild number";
+            }else{
+                document.getElementById("outputText").innerHTML = "num1 + num2";
+            }
+
+            function stringToNumber(text){
+                return parseInt(text);
+            }
+        </script>
+    </body>
+</html>
