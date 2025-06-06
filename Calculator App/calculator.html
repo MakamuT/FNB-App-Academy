@@ -7,35 +7,80 @@
         <table border="1">
             <tr>
                 <td colspan="4">
-                    <input type="text" value="0" id="inputBox">
+                    <input type="text" value="HeyHey" id="inputBox">
                 </td>
             </tr>
             <tr>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-                <td>*</td>
+                <td class="digiBtn" onclick="digiBtnPressed(7)">7</td>
+                <td class="digiBtn" onclick="digiBtnPressed(8)">8</td>
+                <td class="digiBtn" onclick="digiBtnPressed(9)">9</td>
+                <td class="opBtn" onclick="opBtnPressed('*')">*</td>
             </tr>
             <tr>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>-</td>
+                <td class="digiBtn" onclick="digiBtnPressed(4)">4</td>
+                <td class="digiBtn" onclick="digiBtnPressed(5)">5</td>
+                <td class="digiBtn" onclick="digiBtnPressed(6)">6</td>
+                <td class="opBtn" onclick="opBtnPressed('-')">-</td>
             </tr>
             <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>+</td>
+                <td class="digiBtn" onclick="digiBtnPressed(1)">1</td>
+                <td class="digiBtn" onclick="digiBtnPressed(2)">2</td>
+                <td class="digiBtn" onclick="digiBtnPressed(3)">3</td>
+                <td class="opBtn" onclick="opBtnPressed('+')">+</td>
             </tr>
             <tr>
-                <td colspan="2">0</td>
-                <td>AC</td>
-                <td>/</td>
+                <td class="digiBtn" colspan="2" onclick="digiBtnPressed(0)">0</td>
+                <td class="ACBtn" onclick="btnACPressed()">AC</td>
+                <td class="opBtn" onclick="opBtnPressed('/')">/</td>
             </tr>
             <tr>
-                <td>=</td>
+                <td class="opBtn" colspan="4" onclick="eqBtnPressed()">=</td>
             </tr>
         </table>
+
+        <script>
+            var newLine = true;
+            var value1;
+            var currentOp;
+
+            function digiBtnPressed(button){
+                if(newLine){
+                    document.getElementById('inputBox').value = button;
+                    newLine = false;
+                }else{
+                    var currentValue = document.getElementById('inputBox').value;
+                    document.getElementById('inputBox').value = currentValue + button;
+                }
+            }
+            //Clears the numbers
+            function btnACPressed(){
+                document.getElementById('inputBox').value = "HeyHey";
+                newLine = true;
+            }
+            //Mathematical operators
+            function opBtnPressed(operator){
+                currentOp = operator;
+                value1 = parseInt(document.getElementById('inputBox').value);
+                newLine = true;
+            }
+            //Equal sign
+            function eqBtnPressed(){
+                var value2 = parseInt(document.getElementById('inputBox').value);
+                var total;
+
+                switch(currentOp){
+                    case "+" : total = value1 + value2;
+                    break;
+                    case "-" : total = value1 - value2;
+                    break;
+                    case "/" : total = value1 / value2;
+                    break;
+                    case "*" : total = value1 * value2
+                }
+                document.getElementById('inputBox').value = total;
+                value1 = 0;
+                newLine = true;
+            }
+        </script>
     </body>
 </html>

@@ -1,0 +1,37 @@
+table{
+    border-radius: 25px;
+    color: #fff;
+    font: normal 3em cursive;
+    height: 80px;
+    margin: 0 350px;
+    text-align: center;
+    width: 450px;
+}
+tr{
+    background-color: #690022;
+    height: 16.2vh;
+}
+td{
+    border: 1px solid #240006;
+    border-radius: 25px;
+    width: 25vw;
+}
+#inputBox{
+    background-color: transparent;
+    border: 0px;
+    border-radius: 20px;
+    color: #fff;
+    font-family: cursive;
+    font-size: 1em;
+    height: 100%;
+    text-align: left;
+    width: 100%;
+}
+.digiBtn{
+    background-color: #450028;
+    color: #881f2b;
+}
+.opBtn{
+    background-color: #881f2b;
+    color: #450028;
+}
