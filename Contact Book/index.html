@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="">
+    </head>
+    <body onload="fetchContacts()">
+        <div id="table">Contacts loading...</div>
+        <button id="refresh" type="button">Refresh</button>
+        <button type="button" id="addContact">Add</button>
+
+        <script src="config.js"></script>
+        <script>
+            // Ensure rootPath is defined before using it
+            function fetchContacts(){
+                if (typeof rootPath === "undefined") {
+                    console.error("rootPath is not defined. Please check that config.js sets rootPath.");
+                    document.getElementById("table").innerText = "Error: rootPath is not defined.";
+                    return;
+                }
+                fetch(rootPath + "controller/get-contacts/")
+                .then(function(response){
+                    return response.json();
+                })
+                .then(function(data){
+                    //displayOutput(data);
+                    console.log(data);
+                })
+                .catch(function(error){
+                    console.error("Error fetching contacts:", error);
+                    document.getElementById("table").innerText = "Error loading contacts.";
+                });
+            }
+        </script>
+    </body>
+</html>
