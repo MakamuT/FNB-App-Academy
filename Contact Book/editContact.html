@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="avatarImage"></div>
+    <form id="editForm">
+        <label for="firstname">First Name</label>
+        <input type="text" name="firstname" id="firstname" readonly><br>
+        <label for="lastname">Last Name</label>
+        <input type="text" name="lastname" id="lastname" readonly><br>
+        <label for="mobile">Number</label>
+        <input type="email" name="mobile" id="mobile" readonly><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" readonly><br>
+        <label for="avatar" id="avatarLabel" hidden>Change profile image</label>
+        <input type="file" name="avatar" id="avatar" hidden><br>
+        <br>
+        <button type="submit" id="submitForm" hidden>Submit</button>
+    </form>
+    <button type="button" id="homeLink">Home</button>
+    <button type="button" id="editContact">Edit</button>
+    <button type="button" id="deleteContact">Delete</button>
+
+    <script src="config.js"></script>
+    <script>
+        var id = getId();
+        function getId(){
+            var url = window.location.href;
+            var pos = url.search('=');
+            var id = url.slice(pos +1);
+            return id;
+        }
+        function getContact(){
+            fetch(rootPath + 'controller/get-contacts/?id=' + id)
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                
+            })
+        }
+    </script>
+</body>
+</html>
