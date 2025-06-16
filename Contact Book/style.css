@@ -1,0 +1,25 @@
+body{
+    background-color: dimgrey;
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+button{
+    background-color: palevioletred;
+    border: none;
+    border-radius: 25px;
+    color: cornsilk;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 10px 15px;
+}
+label{
+    color: cornsilk;
+    text-align: left;
+    text-transform: uppercase;
+}
+input{
+    background: transparent;
+    border: none;
+    border-bottom: 4px solid palevioletred;
+}
