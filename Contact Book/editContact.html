@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body onload="getContact()">
     <div id="avatarImage"></div>
@@ -30,6 +31,9 @@
         var id = getId();
         document.getElementById('homeLink').addEventListener('click', homeLink);
         document.getElementById('editContact').addEventListener('click', editContact);
+        document.getElementById('submitForm').addEventListener('click', submitForm);
+        document.getElementById('deleteContact').addEventListener('click', deleteContact);
+        
         function getId(){
             var url = window.location.href;
             var pos = url.search('=');
@@ -70,9 +74,44 @@
         }
         function submitForm(e){
             e.preventDefault();
-            const form = new FormData(document.querySelector('#editform'));
+            const form = new FormData(document.querySelector('#editForm'));
             form.append('apiKey', apiKey);
             form.append('id', id);
+
+            fetch(rootPath + 'controller/edit-contact/', {
+                method: 'POST',
+                headers: { 'Accept': 'application/json, *.*' },
+                body: form
+            })
+            .then(function (response) {
+                    return response.text();
+                })
+                .then(function (data) {
+                    if (data == "1") {
+                        alert("Contact edited.");
+                        homeLink();
+                    } else {
+                        alert(data)
+                        homeLink();
+                    }
+                })
+        }
+        function deleteContact(){
+            var confirmDelete = confirm("Chomi.Are you sure? ");
+
+            if (confirmDelete == true){
+                fetch(rootPath + 'controller/delete-contact/?id=' + id)
+                .then(function(response){
+                    return response.text();
+                })
+                .then(function(data){
+                    if(data == "1"){
+                        homeLink();
+                    }else{
+                        alert(data);
+                    }
+                })
+            }
         }
     </script>
 </body>
