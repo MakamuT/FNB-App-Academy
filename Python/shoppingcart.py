@@ -1,3 +1,5 @@
+#Shopping cart
+
 foods = []
 prices = []
 total = 0
